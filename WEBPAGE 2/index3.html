@@ -1,0 +1,108 @@
+
+<html><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<head>
+<style>
+body {background-color: black}
+h1 {color:red}
+p {color:red}
+button {
+	color:red;
+	background:rgb(0, 0, 0);
+	border: 1px solid red;
+	border-radius: 8px;
+	position: center;
+}
+
+</style></head>
+
+
+
+<body>
+<div style="text-align:center">
+<p>Tilt Angle</p>
+        <img hspace="18" style="padding-left: 5px">
+        <button style="height: 50px; width: 60px; font-size: 25px" onclick="downtilt()">--</button>
+        <button style="height: 50px; width: 55px; font-size: 25px" onclick="downcentertilt()">-</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="centertilt()">0</button>
+        <button style="height: 50px; width: 55px; font-size: 25px" onclick="upcentertilt()">+</button>
+        <button style="height: 50px; width: 60px; font-size: 25px" onclick="uptilt()">++</button>
+        <img hspace="18" style="padding-left: 5px">
+      
+        <p>Pan Position</p>
+        <button style="height: 50px; width: 60px; font-size: 25px" onclick="leftpan()">+L</button>
+        <button style="height: 50px; width: 55px; font-size: 25px" onclick="leftCenterPan()">L</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="centerpan()">C</button>
+        <button style="height: 50px; width: 55px; font-size: 25px" onclick="rightCenterPan()">R</button>
+	<button style="height: 50px; width: 60px; font-size: 25px" onclick="rightpan()">R+</button>
+	<br>
+	<p>    </p>													
+	<button style="height: 50px; width: 150px; font-size: 25px" onclick="clawopen()">Open Claw</button>
+        <button style="height: 50px; width: 150px; font-size: 25px" onclick="clawclose()">Close Claw</button>
+</div>
+
+<script>
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+
+
+function downtilt()
+{
+    xmlhttp.open("GET","cgi-bin/downtilt.cgi",true);
+    xmlhttp.send();
+}
+function downcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/downcentertilt.cgi",true);
+    xmlhttp.send();
+}function centertilt()
+{
+    xmlhttp.open("GET","cgi-bin/centertilt.cgi",true);
+    xmlhttp.send();
+}
+function upcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/upcentertilt.cgi",true);
+    xmlhttp.send();
+}
+function uptilt()
+{
+    xmlhttp.open("GET","cgi-bin/uptilt.cgi",true);
+    xmlhttp.send();
+}
+function leftpan()
+{
+    xmlhttp.open("GET","cgi-bin/leftpan.cgi",true);
+    xmlhttp.send();
+}
+function leftCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/leftCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function centerpan()
+{
+    xmlhttp.open("GET","cgi-bin/centerpan.cgi",true);
+    xmlhttp.send();
+}function rightCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/rightCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function rightpan()
+{
+    xmlhttp.open("GET","cgi-bin/rightpan.cgi",true);
+    xmlhttp.send();
+}
+function clawopen()
+{
+    xmlhttp.open("GET","cgi-bin/clawopen.cgi",true);
+    xmlhttp.send();
+}
+function clawclose()
+{
+    xmlhttp.open("GET","cgi-bin/clawclose.cgi",true);
+    xmlhttp.send();
+}
+
+</script>
+</body></html>

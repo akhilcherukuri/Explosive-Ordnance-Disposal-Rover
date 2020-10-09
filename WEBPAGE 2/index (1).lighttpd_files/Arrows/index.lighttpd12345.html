@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://192.168.31.31/index.lighttpd.html -->
+<html class="gr__192_168_31_31"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+body {background-color: black}
+h1 {color:blue}
+
+button {
+	color: blue;
+	background:lightgrey;
+	border: 1px solid #000;
+	border-radius: 8px;
+	position: center;
+}
+
+</style></head>
+
+
+
+<body data-gr-c-s-loaded="true">
+<div style="text-align:center">
+<a href="http://192.168.31.31/2index.lighttpd.html"> Live Camera </a>
+<br>
+<h1> Web Control   <img style="height: 100px" src="./index.lighttpd12345_files/robot52.png"> </h1>
+<br><br>
+
+<button style="height: 50px; width: 100px" onclick="lighton()"><img style="height: 40px" src="./index.lighttpd12345_files/lighton.png"></button>
+<img hspace="20" style="padding-left: 200px">
+<button style="height: 50px; width: 100px" onclick="lightoff()"><img style="height: 35px" src="./index.lighttpd12345_files/lightoff.png"></button>
+<br><br>
+
+<span style="display:inline-block;padding:5px;border:1px solid #fc0; font-size: 140%;font-weight: bold;">
+<br>
+<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px" src="./index.lighttpd12345_files/forward.png"></button>
+<br><br><br><br>
+<img hspace="10" style="padding-left: 5px">
+<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px" src="./index.lighttpd12345_files/left.png"></button>
+<img hspace="20" style="padding-left: 10px">
+<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px" src="./index.lighttpd12345_files/stop.png"></button>
+<img hspace="20" style="padding-left: 10px">
+<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px" src="./index.lighttpd12345_files/right.png"></button>
+<img hspace="10" style="padding-left: 5px">
+<br><br><br><br>
+<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px" src="./index.lighttpd12345_files/reverse.png"></button>
+
+<br><br>
+</span>
+
+</div>
+
+<script>
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+
+function lighton()
+    {
+        xmlhttp.open("GET","cgi-bin/lighton.cgi",true);
+        xmlhttp.send();
+    }
+function lightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/lightoff.cgi",true);
+        xmlhttp.send();
+    }
+function forward()
+{
+	xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+	xmlhttp.send();
+}
+function stop()
+{
+	xmlhttp.open("GET","cgi-bin/stop.cgi",true);
+	xmlhttp.send();
+}
+function left()
+{
+	xmlhttp.open("GET","cgi-bin/left.cgi",true);
+	xmlhttp.send();
+}
+function right()
+{
+	xmlhttp.open("GET","cgi-bin/right.cgi",true);
+	xmlhttp.send();
+}
+function reverse()
+{
+	xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
+	xmlhttp.send();
+}
+
+
+</script>
+
+
+
+</body></html>

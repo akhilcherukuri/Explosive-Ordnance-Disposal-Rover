@@ -1,0 +1,84 @@
+<html><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<head>
+<style>
+body {background-color: black}
+h1 {color:red}
+p {color:red}
+button {
+	color:red;
+	background:rgb(0, 0, 0);
+	border: 1px solid red;
+	border-radius: 8px;
+	position: center;
+}
+
+</style></head>
+<body>
+<div style="text-align:center">
+<br>
+<button style="height: 75px; width: 75px" onclick="lighton()"><img style="height: 50px" src="/images/lighton.png"></button>
+<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 50px" src="./images/forward.png"></button>
+<button style="height: 75px; width: 75px" onclick="lightoff()"><img style="height: 50px" src="/images/lightoff.png"></button>
+<br>
+<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 50px" src="/images/left.png"></button>
+<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 50px" src="/images/stop.png"></button>
+<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 50px" src="/images/right.png"></button>
+<br>
+<button style="height: 75px; width: 75px" onclick="redlighton()"><img style="height: 50px" src="/images/redlighton.png"></button>
+<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 50px" src="/images/reverse.png"></button>
+<button style="height: 75px; width: 75px" onclick="redlightoff()"><img style="height: 50px" src="/images/redlightoff.png"></button>
+<br>
+</div>
+
+<script>
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+
+function lighton()
+    {
+        xmlhttp.open("GET","cgi-bin/lighton.cgi",true);
+        xmlhttp.send();
+    }
+function lightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/lightoff.cgi",true);
+        xmlhttp.send();
+    }
+function forward()
+{
+	xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+	xmlhttp.send();
+}
+function stop()
+{
+	xmlhttp.open("GET","cgi-bin/stop.cgi",true);
+	xmlhttp.send();
+}
+function left()
+{
+	xmlhttp.open("GET","cgi-bin/left.cgi",true);
+	xmlhttp.send();
+}
+function right()
+{
+	xmlhttp.open("GET","cgi-bin/right.cgi",true);
+	xmlhttp.send();
+}
+function reverse()
+{
+	xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
+	xmlhttp.send();
+}
+function redlighton()
+    {
+        xmlhttp.open("GET","cgi-bin/redlighton.cgi",true);
+        xmlhttp.send();
+    }
+function redlightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/redlightoff.cgi",true);
+        xmlhttp.send();
+    }
+
+</script>
+</body></html>

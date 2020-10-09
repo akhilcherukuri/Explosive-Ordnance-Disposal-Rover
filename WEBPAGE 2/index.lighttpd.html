@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://192.168.31.31/index.lighttpd.html -->
+<html class="gr__192_168_31_31"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+body {background-color: black}
+h1 {color:red}
+p {color:red}
+a {color:red}
+button {
+	color:red;
+	background:rgb(0, 0, 0);
+	border: 1px solid red;
+	border-radius: 8px;
+	position: center;
+}
+
+</style></head>
+
+
+
+<body data-gr-c-s-loaded="true">
+<div style="text-align:center">
+<a href="index1.html"> Live Camera </a>
+<br>
+<iframe src="http://192.168.31.31:9000/javascript_simple.html" frameborder="0" align="center" width="340" height="260" scrolling="no" ></iframe>
+<p>Directions</p>
+<button style="height: 75px; width: 75px" onclick="lighton()"><img style="height: 50px" src="/images/lighton.png"></button>
+<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 50px" src="./images/forward.png"></button>
+<button style="height: 75px; width: 75px" onclick="lightoff()"><img style="height: 50px" src="/images/lightoff.png"></button>
+<br>
+<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 50px" src="/images/left.png"></button>
+<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 50px" src="/images/stop.png"></button>
+<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 50px" src="/images/right.png"></button>
+<br>
+<button style="height: 75px; width: 75px" onclick="redlighton()"><img style="height: 50px" src="/images/redlighton.png"></button>
+<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 50px" src="/images/reverse.png"></button>
+<button style="height: 75px; width: 75px" onclick="redlightoff()"><img style="height: 50px" src="/images/redlightoff.png"></button>
+<br>
+<p>Tilt Angle</p>
+        <img hspace="18" style="padding-left: 5px">
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="downtilt()">--</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="downcentertilt()">-</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="centertilt()">0</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="upcentertilt()">+</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="uptilt()">++</button>
+        <img hspace="18" style="padding-left: 5px">
+        <br>
+        <p>Pan Position</p>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="leftpan()">+L</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="leftCenterPan()">L</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="centerpan()">C</button>
+        <button style="height: 50px; width: 50px; font-size: 25px" onclick="rightCenterPan()">R</button>
+		<button style="height: 50px; width: 50px; font-size: 25px" onclick="rightpan()">R+</button>
+		<p>Claw</p>
+		<button style="height: 50px; width: 135px; font-size: 25px" onclick="clawopen()">Open</button>
+        <button style="height: 50px; width: 135px; font-size: 25px" onclick="clawclose()">Close</button>
+        <p></p>
+</div>
+
+<script>
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+
+function lighton()
+    {
+        xmlhttp.open("GET","cgi-bin/lighton.cgi",true);
+        xmlhttp.send();
+    }
+function lightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/lightoff.cgi",true);
+        xmlhttp.send();
+    }
+function forward()
+{
+	xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+	xmlhttp.send();
+}
+function stop()
+{
+	xmlhttp.open("GET","cgi-bin/stop.cgi",true);
+	xmlhttp.send();
+}
+function left()
+{
+	xmlhttp.open("GET","cgi-bin/left.cgi",true);
+	xmlhttp.send();
+}
+function right()
+{
+	xmlhttp.open("GET","cgi-bin/right.cgi",true);
+	xmlhttp.send();
+}
+function reverse()
+{
+	xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
+	xmlhttp.send();
+}
+function downtilt()
+{
+    xmlhttp.open("GET","cgi-bin/downtilt.cgi",true);
+    xmlhttp.send();
+}
+function downcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/downcentertilt.cgi",true);
+    xmlhttp.send();
+}function centertilt()
+{
+    xmlhttp.open("GET","cgi-bin/centertilt.cgi",true);
+    xmlhttp.send();
+}
+function upcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/upcentertilt.cgi",true);
+    xmlhttp.send();
+}
+function uptilt()
+{
+    xmlhttp.open("GET","cgi-bin/uptilt.cgi",true);
+    xmlhttp.send();
+}
+function leftpan()
+{
+    xmlhttp.open("GET","cgi-bin/leftpan.cgi",true);
+    xmlhttp.send();
+}
+function leftCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/leftCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function centerpan()
+{
+    xmlhttp.open("GET","cgi-bin/centerpan.cgi",true);
+    xmlhttp.send();
+}function rightCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/rightCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function rightpan()
+{
+    xmlhttp.open("GET","cgi-bin/rightpan.cgi",true);
+    xmlhttp.send();
+}
+function clawopen()
+{
+    xmlhttp.open("GET","cgi-bin/clawopen.cgi",true);
+    xmlhttp.send();
+}
+function clawclose()
+{
+    xmlhttp.open("GET","cgi-bin/clawclose.cgi",true);
+    xmlhttp.send();
+}
+function redlighton()
+    {
+        xmlhttp.open("GET","cgi-bin/redlighton.cgi",true);
+        xmlhttp.send();
+    }
+function redlightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/redlightoff.cgi",true);
+        xmlhttp.send();
+    }
+
+</script>
+</body></html>
